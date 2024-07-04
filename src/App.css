@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .5px;
+    transition: .3s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btns {
+    color: rgb(240, 239, 239);
+    font-weight: 500;
+    background-color: black !important;
+    width: 383px;
+    height: 43px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns:hover {
+    color: rgb(139, 138, 138);
+}
+
+.btns::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 380px;
+    height: 15px;
+    border-bottom: 2px solid black !important;
+    border-left: 2px solid black !important;
+    transform: translate(6px, 18px);
+}
+
+.btns::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    border-top: 2px solid black !important;
+    border-right: 2px solid black !important;
+    transform: translate(191px, 4px);
+}
+
+.link {
+    border: 2px solid transparent;
+}
+
+.link:hover {
+    font-weight: bold;
+    border-bottom: 2px solid slategray;
+    transition: .1s;
+}
+
+h1{
+    font-size: 20rem;
+}
+
+#containerReg{
+    background-image: url("./assets/imgReg.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#containerLog{
+    background-image: url("./assets/imgUser.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#containerPass{
+    background-image: url("./assets/imgPass.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.githubBrand:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(5px 2px 4px #414158);
+}
+
+#containerPurchase{
+    background-image: url("./assets/imgPurchase.jpg");
+    background-repeat: none;
+    background-size: cover;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.disabled-link {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.87;
+    position: relative;
+}
+
+.disabled-link::after {
+    background-color: white;
+    content: 'SIN STOCK';
+    color: rgb(40, 90, 141);
+    font-weight: bolder;
+    font-size: x-large;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; 
+}
+
+#accordion{
+    border: none;
+    border-radius: 0px;
+}
+
+#accordion:hover{
+    background: none;
+}
+
+#accordion .accComponent{
+    border-radius: 0px;
+    width:100%;
+}
+#accordion .accComponent:focus{
+    border-radius: 0px;
+    box-shadow: none;  
+    background: none;
+}
+#accordion .accComponent:hover{
+    border-radius: 0px;
+    background: none;
+}
+
+.inpDoc input{
+    border-radius: 0%;
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.file-label {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: Black;
+    cursor: pointer;
+}
