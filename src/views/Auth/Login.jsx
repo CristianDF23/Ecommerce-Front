@@ -14,20 +14,21 @@ export const Login = () => {
     const [openModal, setOpenModal] = useState(false);
     const [openAlert, setOpenAlert] = useState(false);
     const [modalState, setModalState] = useState(false)
-    const { setUserInformation, userInformation } = useContext(UserContext)
+    const { setUserInformation } = useContext(UserContext)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await handleLogin(email, password, setUserInformation, setOpenAlert);
+            const getUser = JSON.parse(localStorage.getItem('userInformation'))
             setTimeout(() => {
-                navigate(userInformation.rol === 'Usuario' ? '/api/v1/profile' : '/api/v1/admin');
+                navigate(getUser.rol === 'Usuario' ? '/api/v1/profile' : '/api/v1/admin');
             }, 2500)
         } catch (error) {
             console.log(error);
         }
     };
-    console.log(userInformation);
+
     return (
         <section className="w-5/6 flex mx-auto">
             <form onSubmit={handleSubmit} className="w-1/2 px-20 py-10 mx-auto flex flex-col gap-2">
