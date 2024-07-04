@@ -20,6 +20,7 @@ function App() {
             <BrowserRouter>
                 <NavBar />
                 <Routes>
+                    <Route path="/" element={<Home />} />
                     <Route path="/api/v1/home" element={<Home />} />
                     <Route path="/api/v1/home/page/:pageNumber" element={<Home />} />
                     <Route path="/api/v1/home/category/:category/page/:pageNumber" element={<Home />} />
